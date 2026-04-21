@@ -1,8 +1,11 @@
 package com.dxc.bookstore.api.bookstoreservice.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 import java.util.List;
 
 public class BookRequest {
+    @NotBlank(message = "ISBN is required")
     private String isbn;
     private String title;
     private int year;

@@ -8,6 +8,7 @@ import com.dxc.bookstore.api.bookstoreservice.exception.BookAlreadyExistExceptio
 import com.dxc.bookstore.api.bookstoreservice.exception.BookNotFoundException;
 import com.dxc.bookstore.api.bookstoreservice.mapper.BookMapper;
 import com.dxc.bookstore.api.bookstoreservice.respository.BookRepository;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

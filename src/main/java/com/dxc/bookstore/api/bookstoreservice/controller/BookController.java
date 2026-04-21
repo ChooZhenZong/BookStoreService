@@ -3,6 +3,7 @@ package com.dxc.bookstore.api.bookstoreservice.controller;
 import com.dxc.bookstore.api.bookstoreservice.dto.BookRequest;
 import com.dxc.bookstore.api.bookstoreservice.dto.BookResponse;
 import com.dxc.bookstore.api.bookstoreservice.service.BookServiceImpl;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<BookResponse> addBook(@RequestBody BookRequest bookRequest) {
+    public ResponseEntity<BookResponse> addBook(@Valid @RequestBody BookRequest bookRequest) {
         return ResponseEntity.ok(bookServiceImpl.addBook(bookRequest));
     }
 
